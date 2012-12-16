@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+<form method="POST">
+  {% if user.is_authenticated %}
+    {% block login_area %}
+        {{ form.as_p }}
+        <a class="btn btn-large btn-success" href="#">Sign In</a>
+    {% endblock %}
+    {% endif %}
+</form>
